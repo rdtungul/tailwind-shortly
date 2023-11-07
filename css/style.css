@@ -570,6 +570,41 @@ video {
   justify-content: space-between;
 }
 
+.align-cols-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.align-cols-center-start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .align-cols-center-start {
+    align-items: flex-start;
+  }
+}
+
+.flex-col-p6 {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.footer-links {
+  text-transform: capitalize;
+  --tw-text-opacity: 1;
+  color: hsl(257 7% 63% / var(--tw-text-opacity));
+}
+
+.footer-links:hover {
+  --tw-text-opacity: 1;
+  color: hsl(180 66% 69% / var(--tw-text-opacity));
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -730,6 +765,10 @@ video {
   margin-bottom: 11rem;
 }
 
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -740,10 +779,6 @@ video {
 
 .mt-24 {
   margin-top: 6rem;
-}
-
-.mt-32 {
-  margin-top: 8rem;
 }
 
 .box-border {
@@ -1433,10 +1468,22 @@ video {
   margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
 }
 
+.space-y-16 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(4rem * var(--tw-space-y-reverse));
+}
+
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -2066,6 +2113,11 @@ video {
   padding-right: 2rem;
 }
 
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 .py-24 {
   padding-top: 6rem;
   padding-bottom: 6rem;
@@ -2608,6 +2660,21 @@ video {
   content: var(--tw-content);
 }
 
+/* ========== CTA Styling */
+
+#cta {
+  background-image: url("../images/bg-boost-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ========== Footer Links Styling */
+
+.ficon:hover {
+  filter: invert(50%) sepia(70%) saturate(464%) hue-rotate(130deg)
+    brightness(90%) contrast(85%);
+}
+
 @media (min-width: 480px) {
   .sm\:container {
     width: 100%;
@@ -2690,12 +2757,12 @@ video {
     left: 4rem;
   }
 
-  .md\:mt-8 {
-    margin-top: 2rem;
-  }
-
   .md\:mt-16 {
     margin-top: 4rem;
+  }
+
+  .md\:mt-8 {
+    margin-top: 2rem;
   }
 
   .md\:block {
@@ -2722,6 +2789,16 @@ video {
     flex-direction: row;
   }
 
+  .md\:items-start {
+    align-items: flex-start;
+  }
+
+  .md\:space-x-20 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(5rem * var(--tw-space-x-reverse));
+    margin-left: calc(5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .md\:space-x-3 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(0.75rem * var(--tw-space-x-reverse));
@@ -2745,8 +2822,18 @@ video {
     padding-bottom: 0.5rem;
   }
 
+  .md\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
   .md\:text-left {
     text-align: left;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 

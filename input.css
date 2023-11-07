@@ -4,8 +4,34 @@
 @layer base {
   /* heading 5 style */
 }
+
+/* ========== CTA Styling */
+#cta {
+  background-image: url("../images/bg-boost-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ========== Footer Links Styling */
+.ficon:hover {
+  filter: invert(50%) sepia(70%) saturate(464%) hue-rotate(130deg)
+    brightness(90%) contrast(85%);
+}
+
 @layer components {
   .align-items-center {
     @apply flex items-center justify-between;
+  }
+  .align-cols-center {
+    @apply flex flex-col items-center;
+  }
+  .align-cols-center-start {
+    @apply align-cols-center md:items-start;
+  }
+  .flex-col-p6 {
+    @apply flex flex-col p-6;
+  }
+  .footer-links {
+    @apply capitalize text-grayishViolet hover:text-cyanLight;
   }
 }

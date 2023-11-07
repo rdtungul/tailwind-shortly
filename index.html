@@ -100,6 +100,7 @@
           class="relative flex flex-col w-full p-10 -mt-20 space-y-4 rounded-lg bg-darkViolet md:flex-row md:space-y-0 md:space-x-3"
         >
           <input
+            id="link-input"
             type="text"
             class="flex-1 p-3 placeholder-yellow-500 border-2 rounded-lg focus:outline-none"
             placeholder="Shorten a link here"
@@ -110,6 +111,12 @@
           >
             Shorten It!
           </button>
+
+          <!-- Error Messages -->
+          <div
+            id="error-msg"
+            class="absolute text-sm italic left-7 bottom-3 text-red"
+          ></div>
         </form>
 
         <!-- Link 1 -->
@@ -170,6 +177,6 @@
         </div>
       </div>
     </section>
-    <script src="js/index.js"></script>
+    <script src="js/index.js" defer></script>
   </body>
 </html>

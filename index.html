@@ -14,10 +14,11 @@
     />
     <!-- external css -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="input.css" />
   </head>
   <body>
     <!-- NAVIGATION CONTAINER -->
-    <nav class="container relative p-6 mx-auto">
+    <nav class="container relative p-6 mx-auto lg:px-20">
       <!-- Flex Container for all items -->
       <div class="align-items-center">
         <!-- Flex Container for logo/menu -->
@@ -26,15 +27,9 @@
           <img src="images/logo.svg" alt="" />
           <!-- Left Menu -->
           <div class="hidden space-x-8 font-bold lg:flex">
-            <a href="#" class="text-grayishViolet hover:text-veryDarkViolet">
-              Features
-            </a>
-            <a href="#" class="text-grayishViolet hover:text-veryDarkViolet">
-              Pricing
-            </a>
-            <a href="#" class="text-grayishViolet hover:text-veryDarkViolet">
-              Resources
-            </a>
+            <a href="#" class="nav-links"> Features </a>
+            <a href="#" class="nav-links"> Pricing </a>
+            <a href="#" class="nav-links"> Resources </a>
           </div>
         </div>
 
@@ -48,18 +43,50 @@
             class="px-8 py-3 font-bold text-white rounded-full bg-cyan hover:opacity-70"
             >Signup</a
           >
-
-          <!-- @todo: Hamburger Menu -->
         </div>
+        <!--  Hamburger Menu -->
+        <button
+          type="button"
+          id="menu-btn"
+          class="block hamburger lg:hidden focus:outline-none"
+        >
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
 
-        <!-- @todo: Mobile Menu -->
+        <!-- Mobile Menu -->
+        <div
+          id="menu"
+          class="absolute hidden p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100"
+        >
+          <div
+            class="flex flex-col items-center justify-center w-full space-y-6 font-medium text-white rounded-sm"
+          >
+            <a href="#" class="mb-nav-links">Features</a>
+            <a href="#" class="mb-nav-links">Pricing</a>
+            <a href="#" class="mb-nav-links">Resources</a>
+            <a
+              href="#"
+              class="w-full pt-6 text-center border-t border-gray-400 hover:text-cyan"
+              >Login</a
+            >
+            <a
+              href="#"
+              class="w-full py-3 text-center rounded-full bg-cyan hover:opacity-70"
+              >Sign Up</a
+            >
+          </div>
+        </div>
       </div>
     </nav>
 
     <!-- HERO SECTION -->
     <section id="hero">
       <!-- Hero Container -->
-      <div class="container flex flex-col-reverse p-6 mx-auto lg:flex-row">
+      <div
+        class="container flex flex-col-reverse p-6 mx-auto lg:px-20 lg:flex-row"
+      >
         <!-- Content Container -->
         <div class="flex flex-col space-y-10 mb-44 lg:mt-16 xl:mb-52 lg:w-1/2">
           <h1
@@ -278,7 +305,7 @@
 
     <!-- CTA SECTION -->
     <section id="cta" class="py-24 bg-darkViolet">
-      <div class="flex flex-col p-2 space-y-6">
+      <div class="flex flex-col p-2 space-y-6 lg:px-20">
         <h5
           class="mx-auto space-y-10 text-4xl font-bold text-center text-white"
         >
@@ -295,7 +322,7 @@
     <!-- FOOTER SECTION -->
     <footer class="py-16 bg-veryDarkViolet">
       <div
-        class="container justify-between mx-auto space-y-16 align-cols-center md:flex-row md:space-y-0 md:items-start"
+        class="container justify-between mx-auto space-y-16 align-cols-center md:space-x-5 lg:space-x-10 lg:px-20 md:flex-row md:space-y-0 md:items-start"
       >
         <!-- Logo -->
         <img src="images/logo.svg" alt="" />
@@ -336,19 +363,32 @@
         </div>
 
         <!-- Social Links -->
-        <div class="flex space-x-6">
-          <a href="#">
-            <img src="images/icon-instagram.svg" alt="" class="ficon" />
-          </a>
-          <a href="#">
-            <img src="images/icon-pinterest.svg" alt="" class="ficon" />
-          </a>
-          <a href="#">
-            <img src="images/icon-facebook.svg" alt="" class="ficon" />
-          </a>
-          <a href="#">
-            <img src="images/icon-twitter.svg" alt="" class="ficon" />
-          </a>
+        <div class="flex-col align-items-center md:items-start">
+          <div class="flex space-x-6">
+            <a href="#">
+              <img src="images/icon-instagram.svg" alt="" class="ficon" />
+            </a>
+            <a href="#">
+              <img src="images/icon-pinterest.svg" alt="" class="ficon" />
+            </a>
+            <a href="#">
+              <img src="images/icon-facebook.svg" alt="" class="ficon" />
+            </a>
+            <a href="#">
+              <img src="images/icon-twitter.svg" alt="" class="ficon" />
+            </a>
+            <!-- Copy -->
+          </div>
+          <div class="mt-10 text-white md:mt-5">
+            <span class="auto-year"></span>.
+            <a
+              href=""
+              class="mx-2 hover:border-cyan hover:text-cyan"
+              target="_blank"
+              >rosephdarl</a
+            >
+            - Web Developer | Instructor
+          </div>
         </div>
       </div>
     </footer>

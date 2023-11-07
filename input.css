@@ -2,7 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 @layer base {
-  /* heading 5 style */
+  /* Nav Links Style */
+  .nav-links {
+    @apply text-grayishViolet hover:text-veryDarkViolet;
+  }
+  /* Mobile Nav Style */
+  .mb-nav-links {
+    @apply w-full text-center hover:text-cyan;
+  }
+  /* Footer Links Style */
+  .footer-links {
+    @apply capitalize text-grayishViolet hover:text-cyanLight;
+  }
 }
 
 /* ========== CTA Styling */
@@ -31,7 +42,47 @@
   .flex-col-p6 {
     @apply flex flex-col p-6;
   }
-  .footer-links {
-    @apply capitalize text-grayishViolet hover:text-cyanLight;
-  }
+}
+
+/* ========== HAMBURGER MENU */
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: #9c9aa6;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+.hamburger-middle {
+  transform: translateY(7px);
+}
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+/* ==== Click Open Menu Styles*/
+.open {
+  transform: rotate(90deg);
+  transform: rotate(0px);
+}
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+.open .hamburger-middle {
+  display: none;
+}
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }

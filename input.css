@@ -6,20 +6,9 @@
   h5 {
     @apply absolute px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black;
   }
-  .align-items-center {
-    @apply flex flex-col items-center;
-  }
 }
 @layer components {
-  /* button container */
-  .btn {
-    @apply px-10 py-2 my-0 font-bold tracking-widest uppercase border-2 border-black font-alata hover:bg-black hover:text-white;
+  .align-items-center {
+    @apply flex items-center justify-between;
   }
 }
-
-svg {
-  fill: #ffffff;
-  height: 25px;
-}
-
-/* ========= HERO STYLING */
